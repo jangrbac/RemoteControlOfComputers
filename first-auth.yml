@@ -1,0 +1,9 @@
+- hosts: "{{ target | default('predavalnice') }}"
+  tasks:
+  - name:
+    authorized_key:
+      user: root
+      key: "ssh-rsa A...redacted public key...="
+      manage_dir: yes
+      state: present
+    become: yes
