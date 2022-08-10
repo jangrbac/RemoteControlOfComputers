@@ -1,0 +1,4 @@
+- hosts: "{{ target | default('racunalnice') }}"
+  tasks :
+  - name: set grub selection entry to Windows and reboot
+    command: /path/to/the/script/set_grub_to_Win_and_reboot.sh
